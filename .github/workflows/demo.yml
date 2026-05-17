@@ -6,18 +6,21 @@ on:
       - main
 
 jobs:
-  html-check:
+  demo-job:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Print message
-        run: echo "CI/CD ажиллаж байна"
+      - name: Show repository files
+        run: ls
 
-      - name: Force error
-        run: exit 1
+      - name: Print branch name
+        run: echo "Current branch is main"
 
-      - name: Success message
-        run: echo "Success"
+      - name: Print CI message
+        run: echo "CI/CD pipeline ажиллаж байна"
+
+      - name: Final success message
+        run: echo "Workflow completed successfully"
