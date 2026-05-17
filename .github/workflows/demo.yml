@@ -10,11 +10,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Print message
+      - name: Show repository files
+        run: ls
+
+      - name: Print branch name
+        run: echo "Current branch is main"
+
+      - name: Print CI message
         run: echo "CI/CD pipeline ажиллаж байна"
 
-      - name: Success message
-        run: echo "Build success"
+      - name: Final success message
+        run: echo "Workflow completed successfully"
